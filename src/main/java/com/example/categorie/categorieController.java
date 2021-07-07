@@ -33,12 +33,7 @@ public class categorieController {
         List<categorie> categories=this.categorieRepository.findAll();
         return new ResponseEntity<>(categories, HttpStatus.OK);
     }
-    @GetMapping("/all")
-    public ResponseEntity<List<categorie>> getAllCategories()
-    {
-        List<categorie> categories=this.categorieRepository.findAll();
-        return new ResponseEntity<>(categories, HttpStatus.OK);
-    }
+  
     @GetMapping("/findById/{id}")
     public  ResponseEntity<categorie> getCategorieById(@PathVariable("id") Long id) {
         List<categorie> categories = this.categorieRepository.findAll();
